@@ -28,7 +28,7 @@ class TwilioValidatorServiceProvider extends ServiceProvider
                 // throw exception if the twilio credentials are missing from the env
                 if( env('TWILIO_SID') == null || env('TWILIO_TOKEN') == null ) {
                     // throw the custom exception defined below
-                    throw new TwilioCredentialsNotFoundException;
+                    throw new TwilioCredentialsNotFoundException('Please provide a TWILIO_SID and TWILIO_TOKEN in your .env file.');
                 }
 
                 $client = new Twilio(env('TWILIO_SID'), env('TWILIO_TOKEN'));
@@ -44,5 +44,8 @@ class TwilioValidatorServiceProvider extends ServiceProvider
 
         });
     }
-
 }
+
+// this exception is thrown in the twilio credentials are not found in the env file
+class TwilioCredentialsNotFoundException extends \Exception {}
+
