@@ -27,8 +27,7 @@ class TwilioValidatorServiceProvider extends ServiceProvider
 
                 // throw exception if the twilio credentials are missing from the env
                 if( env('TWILIO_SID') == null || env('TWILIO_TOKEN') == null ) {
-                    // make a custom exception and throw it
-                    class TwilioCredentialsNotFoundException extends \Exception {}
+                    // throw the custom exception defined below
                     throw new TwilioCredentialsNotFoundException;
                 }
 
@@ -56,3 +55,7 @@ class TwilioValidatorServiceProvider extends ServiceProvider
         //
     }
 }
+
+// this exception is thrown in the twilio credentials are not found in the env file
+class TwilioCredentialsNotFoundException extends \Exception {}
+
