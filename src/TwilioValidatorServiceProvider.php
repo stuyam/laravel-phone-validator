@@ -1,6 +1,6 @@
 <?php
 
-namespace Yamartino\TwilioValidator;
+namespace StuYam\TwilioValidator;
 
 use Illuminate\Support\ServiceProvider;
 use \Lookups_Services_Twilio as Twilio;

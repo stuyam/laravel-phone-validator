@@ -1,5 +1,5 @@
 {
-    "name": "yamartino/laravel-twilio-validator",
+    "name": "stuyam/laravel-twilio-validator",
     "description": "A twilio phone lookup validator for form requests in laravel",
     "license": "MIT",
     "keywords": ["laravel", "twilio", "validator", "validation", "phone"],
@@ -16,7 +16,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Yamartino\\TwilioValidator\\": "src/"
+            "StuYam\\TwilioValidator\\": "src/"
         }
     }
 }
