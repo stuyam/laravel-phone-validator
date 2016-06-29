@@ -26,7 +26,7 @@ class TwilioValidatorServiceProvider extends ServiceProvider
             $validator->extend('twilio', function($attribute, $value, $parameters, $validator){
 
                 // throw exception if the twilio credentials are missing from the env
-                if( isset(env('TWILIO_SID')) == false || isset(env('TWILIO_TOKEN')) == false ) {
+                if( env('TWILIO_SID') == null || env('TWILIO_TOKEN') == null ) {
                     throw new Exception('Missing TWILIO_SID or TWILIO_TOKEN from env file.');
                 }
 
