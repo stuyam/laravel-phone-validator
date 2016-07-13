@@ -1,8 +1,8 @@
 {
-    "name": "stuyam/laravel-twilio-validator",
-    "description": "A twilio phone lookup validator for form requests in laravel",
+    "name": "stuyam/laravel-phone-validator",
+    "description": "A phone validator for Laravel using the free Twilio phone lookup service",
     "license": "MIT",
-    "keywords": ["laravel", "twilio", "validator", "validation", "phone"],
+    "keywords": ["laravel", "phone", "twilio", "validator", "validation"],
     "authors": [
         {
             "name": "Stuart Yamartino",
@@ -16,7 +16,7 @@
     },
     "autoload": {
         "psr-4": {
-            "StuYam\\TwilioValidator\\": "src/"
+            "StuYam\\PhoneValidator\\": "src/"
         }
     }
 }

@@ -1,11 +1,11 @@
 <?php
 
-namespace StuYam\TwilioValidator;
+namespace StuYam\PhoneValidator;
 
 use Illuminate\Support\ServiceProvider;
 use \Lookups_Services_Twilio as Twilio;
 
-class TwilioValidatorServiceProvider extends ServiceProvider
+class PhoneValidatorServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap any application services.
@@ -15,7 +15,7 @@ class TwilioValidatorServiceProvider extends ServiceProvider
     public function boot()
     {
         // load translation files
-        $this->loadTranslationsFrom(__DIR__ . '/lang', 'twilio');
+        $this->loadTranslationsFrom(__DIR__ . '/lang', 'phone');
 
         $this->app->booted(function($app) {
             // get validator and translator
@@ -23,7 +23,7 @@ class TwilioValidatorServiceProvider extends ServiceProvider
             $translator = $app['translator'];
 
             // setup custom twilio validator
-            $validator->extend('twilio', function($attribute, $value, $parameters, $validator){
+            $validator->extend('phone', function($attribute, $value, $parameters, $validator){
 
                 // throw exception if the twilio credentials are missing from the env
                 if( env('TWILIO_SID') == null || env('TWILIO_TOKEN') == null ) {
@@ -40,7 +40,7 @@ class TwilioValidatorServiceProvider extends ServiceProvider
                 } catch (\Services_Twilio_RestException $e) {
                     return false;
                 }
-            }, $translator->get('twilio::validation.twilio'));
+            }, $translator->get('phone::validation.phone'));
 
         });
     }
