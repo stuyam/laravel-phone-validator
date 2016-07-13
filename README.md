@@ -22,11 +22,12 @@ StuYam\PhoneValidator\PhoneValidatorServiceProvider::class
 ###Step 3
 Add Twilio credentials to your .env file:
 
+(If you don't have a Twilio account you can go to [Twilio.com](https://www.twilio.com/) and make a free account)
+
 ```
 TWILIO_SID=xxxxxxxx
 TWILIO_TOKEN=xxxxxxxx
 ```
-(If you don't have a Twilio account you can go to [Twilio.com](https://www.twilio.com/) and make a free account)
 
 
 ###Usage
