@@ -14,6 +14,9 @@ class PhoneValidatorServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        // load translation files
+        $this->loadTranslationsFrom(__DIR__ . '/lang', 'phone');
+
         // setup custom twilio validator
         $this->app->validator->extend('phone', function($attribute, $value, $parameters, $validator){
 
@@ -32,7 +35,7 @@ class PhoneValidatorServiceProvider extends ServiceProvider
             } catch (\Services_Twilio_RestException $e) {
                 return false;
             }
-        },'TESTSST');
+        }, $this->app->translator->get('phone::validation.phone'));
     }
 
     /**
