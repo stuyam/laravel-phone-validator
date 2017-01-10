@@ -1,4 +1,7 @@
 #Lavarel Phone Validator
+[![Packagist](https://img.shields.io/packagist/v/stuyam/laravel-phone-validator.svg)](https://packagist.org/packages/stuyam/laravel-phone-validator)
+[![Packagist](https://img.shields.io/packagist/dt/stuyam/laravel-phone-validator.svg)](https://packagist.org/packages/stuyam/laravel-phone-validator)
+
 A phone validator for Laravel using the FREE [Twilio phone lookup service](https://www.twilio.com/lookup)
 
 This custom validator validates that a phone number actual exists. Not just if it has a specific format or not, but if the phone number is a real registered phone number. It is smart enough to handle formated numbers like ```(123)-555-1234``` and unfromated numbers like ```1235551234``` so users can enter in a phone number however they are most comfortable.
