@@ -1,4 +1,4 @@
-#Lavarel Phone Validator
+# Lavarel Phone Validator
 [![Packagist](https://img.shields.io/packagist/v/stuyam/laravel-phone-validator.svg)](https://packagist.org/packages/stuyam/laravel-phone-validator)
 [![Packagist](https://img.shields.io/packagist/dt/stuyam/laravel-phone-validator.svg)](https://packagist.org/packages/stuyam/laravel-phone-validator)
 
@@ -8,21 +8,21 @@ This custom validator validates that a phone number actual exists. Not just if i
 
 Also see: [Laravel Kickbox Validator](https://github.com/stuyam/laravel-kickbox-validator) for email address validation.
 
-###Step 1
+### Step 1
 Install via composer:
 
 ```
 composer require stuyam/laravel-phone-validator
 ```
 
-###Step 2
+### Step 2
 Add to your ```config/app.php``` service provider list:
 
 ```php
 StuYam\PhoneValidator\PhoneValidatorServiceProvider::class
 ```
 
-###Step 3
+### Step 3
 Add Twilio credentials to your .env file:
 
 (If you don't have a Twilio account you can go to [Twilio.com](https://www.twilio.com/) and make a free account)
@@ -33,7 +33,7 @@ TWILIO_TOKEN=xxxxxxxx
 ```
 
 
-###Usage
+### Usage
 Add the string 'phone' to a form request rules or validator like so:
 
 ```php
