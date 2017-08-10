@@ -1,6 +1,6 @@
 {
     "name": "stuyam/laravel-phone-validator",
-    "description": "A phone validator for Laravel using the free Twilio phone lookup service",
+    "description": "A phone validator for Laravel using the free Twilio phone lookup service.",
     "license": "MIT",
     "keywords": ["laravel", "phone", "twilio", "validator", "validation"],
     "authors": [
