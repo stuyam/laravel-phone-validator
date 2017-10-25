@@ -6,6 +6,8 @@ A phone validator for Laravel using the FREE [Twilio phone lookup service](https
 
 This custom validator validates that a phone number actual exists. Not just if it has a specific format or not, but if the phone number is a real registered phone number. It is smart enough to handle formated numbers like ```(123)-555-1234``` and unfromated numbers like ```1235551234``` so users can enter in a phone number however they are most comfortable.
 
+For a working example check out [Laravel Validator Example](https://github.com/stuyam/validators) project.
+
 Also see: [Laravel Kickbox Validator](https://github.com/stuyam/laravel-kickbox-validator) for email address validation.
 
 ### Step 1
