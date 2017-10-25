@@ -3,7 +3,7 @@
 namespace StuYam\PhoneValidator;
 
 use Illuminate\Support\ServiceProvider;
-use \Lookups_Services_Twilio as Twilio;
+use Twilio\Rest\Client as Twilio;
 
 class PhoneValidatorServiceProvider extends ServiceProvider
 {
@@ -30,17 +30,16 @@ class PhoneValidatorServiceProvider extends ServiceProvider
 
             // throw exception if the twilio credentials are missing from the env
             if( $twilioSID == null || $twilioToken == null ) {
-                // throw the custom exception defined below
                 throw new TwilioCredentialsNotFoundException('Please provide a TWILIO_SID and TWILIO_TOKEN in your .env file.');
             }
 
             $client = new Twilio($twilioSID, $twilioToken);
             try {
-                // attempt to get the carrier on a phone number
+                // attempt to look up a phone number
                 // if an exception is thrown, no phone number was found
-                $client->phone_numbers->get($value)->carrier;
+                $client->lookups->phoneNumbers($value)->fetch();
                 return true;
-            } catch (\Services_Twilio_RestException $e) {
+            } catch (\Exception $e) {
                 return false;
             }
         }, $this->app->translator->get('phone::validation.phone'));
