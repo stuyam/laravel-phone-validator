@@ -18,5 +18,12 @@
         "psr-4": {
             "StuYam\\PhoneValidator\\": "src/"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "StuYam\\PhoneValidator\\PhoneValidatorServiceProvider"
+            ]
+        }
     }
 }
