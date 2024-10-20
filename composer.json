@@ -11,8 +11,8 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "illuminate/support": "^5.0|^6.0|^7.0|^8.0|^9.0|^10.0",
-        "twilio/sdk": "^5.0|^6.0|^7.0"
+        "illuminate/support": "^5.0|^6.0|^7.0|^8.0|^9.0|^10.0|^11.0",
+        "twilio/sdk": "^5.0|^6.0|^7.0|^8.0"
     },
     "autoload": {
         "psr-4": {
